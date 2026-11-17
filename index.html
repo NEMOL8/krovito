@@ -1089,6 +1089,50 @@ body:before{opacity:.048!important;background-image:radial-gradient(#000 0.38px,
   .listing-focus>.listing-grid{padding:8px!important}
 }
 </style>
+
+<style id="v28-media-repair">
+/* v28: no exposed photo-container background; preserve the single-screen layout. */
+@media(min-width:1011px){
+  .listing-grid>.primary-column>.listing-photo{
+    display:block!important;
+    width:100%!important;
+    height:clamp(180px,calc(100dvh - 485px),435px)!important;
+    min-height:0!important;
+    padding:0!important;
+    align-self:start!important;
+    justify-self:stretch!important;
+    overflow:hidden!important;
+    line-height:0!important;
+    background:#f6f6f7!important;
+  }
+  .listing-grid>.primary-column>.listing-photo>img{
+    display:block!important;
+    width:100%!important;
+    height:100%!important;
+    max-width:100%!important;
+    max-height:none!important;
+    object-fit:cover!important;
+    object-position:50% 50%!important;
+    margin:0!important;
+    padding:0!important;
+    vertical-align:top!important;
+  }
+}
+@media(min-width:1011px) and (max-width:1279px){
+  .listing-grid>.primary-column>.listing-photo{
+    height:clamp(165px,calc(100dvh - 510px),345px)!important;
+  }
+}
+@media(min-width:1011px) and (max-height:760px){
+  .listing-grid>.primary-column>.listing-photo{
+    height:clamp(155px,calc(100dvh - 505px),315px)!important;
+  }
+}
+@media(max-width:1010px){
+  .listing-grid .listing-photo{height:auto!important;background:#f6f6f7!important}
+  .listing-grid .listing-photo>img{display:block!important;width:100%!important;height:auto!important;max-height:none!important;object-fit:cover!important}
+}
+</style>
 </head>
 <body>
 <a href="#listing-main" class="skip-to-listing">Перейти к объявлению</a>
@@ -1122,7 +1166,7 @@ body:before{opacity:.048!important;background-image:radial-gradient(#000 0.38px,
     <aside class="side-column">
       <section class="seller-card"><h2><a href="#" class="scare-link">Герман</a></h2><p>Частное лицо</p><p>Москва</p><a href="#" class="phone-button scare-link"><span aria-hidden="true">☎</span> Показать телефон</a><button type="button" class="message-button">Написать продавцу</button><div class="seller-extra">Другие объявления: <a href="#" class="scare-link">6</a><br>На сайте с октября 2012 г.<br>Последний вход: давно</div><small>частное лицо, без гарантий</small></section><div class="warning-box"><strong>Советы по безопасности</strong>Осматривайте товар при встрече. Не переводите деньги заранее. Если товар смотрит в ответ — завершайте сделку без промедления.</div>
     </aside>
-    <section class="recommend"><h2>Похожие объявления</h2><div class="rec-row"><img src="assets/meat-grinder.jpg" width="120" height="90" data-asset="meat-grinder.jpg" alt="Мясорубка"><div><a href="#" class="scare-link">Мясорубка для мяса</a><b>300 руб.</b></div></div><div class="rec-row"><img src="assets/television.jpg" width="120" height="90" data-asset="television.jpg" alt="Телевизор"><div><a href="#" class="scare-link">Телевизор (работает только СТС)</a><b>1 500 руб.</b></div></div><div class="rec-row"><img src="assets/jars.jpg" width="120" height="90" data-asset="jars.jpg" alt="Банки с воздухом"><div><a href="#" class="scare-link">Банки с воздухом</a><b>50 руб.</b><small>Воздух 1998 года.</small></div></div></section>
+    <section class="recommend"><h2>Похожие объявления</h2><div class="rec-row"><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABcQERQRDhcUEhQaGBcbIjklIh8fIkYyNSk5UkhXVVFIUE5bZoNvW2F8Yk5QcptzfIeLkpSSWG2grJ+OqoOPko3/2wBDARgaGiIeIkMlJUONXlBejY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY3/wAARCABIAHADASIAAhEBAxEB/8QAGgAAAwEBAQEAAAAAAAAAAAAAAAMEAQIFBv/EACkQAAICAQQBAgYDAQAAAAAAAAABAgMRBBIhMRMiQRQjM0JRYSUyNIH/xAAXAQEBAQEAAAAAAAAAAAAAAAAAAQID/8QAGREBAQEBAQEAAAAAAAAAAAAAAAEREjEh/9oADAMBAAIRAxEAPwAT3TY5IRX/AGY8wtYzYmSCJodvoxABBpjMYEGgJtujVHMhcdXGUcxAqQSJo6jMlFds26yyDxjgBuTGxEbm3hrA32AyH15ocIX+mQyTEV1IIkmp1PiwvycV3zsaQR6GDBULuWpGu+H5KGALjapdGTm0s4Yila+CdLZDp54TRVdZ5K3HDIYVThw0yUW0teRPBVa3KaWCbSVydscp4yXX+m7GPYsREl85pj8iE15ZcjMiq2TUdS+TuySSbyiHUWNaiWGcObkuySrhOst3W4TCm5xtijLK/cncsXRf7A9m6K2bovknUZPnJ6S0kpadWY4wJhWsFxlukvVON8co9iqzSamrOEmeFZHHA3TUy2NqTwIVZbXp4T4aE2RolwsHPwjm+W2a9NGPecmkV6NUxmk8MXr2t0sLkim3XLMeDm3VS+55IEW1OMNy7Eb5Y7ZR5t6eehSimMXSr2/O8mxC/wCvI5WTm6u7F6SS/uGF0yrPGBMopv8A6WFj6OvV/wAfGKX2nmQue5r9nUZS+GWOsEcZOMmzWuciucs8jtNqdleMkfk3cHL9Jnprl6a1ck8oXPVNvLZB5X0jltt9l6TD7rm+mRWWNv3Y5RynkfTVXOHXJNMR12JJrAxWYDw4mxN3plgdGKLl86RmMgBHRm0XNbXyAAVR1C8KghWz8gBNSR0kkdbc9gBFcygjFHnjgANI1pr3LdDKqFbdnswARL4RqZRVr2dM86/LkwASfUvj/9k=" width="120" height="90" alt="Мясорубка"><div><a href="#" class="scare-link">Мясорубка для мяса</a><b>300 руб.</b></div></div><div class="rec-row"><img src="assets/television.jpg" width="120" height="90" data-asset="television.jpg" alt="Телевизор"><div><a href="#" class="scare-link">Телевизор (работает только СТС)</a><b>1 500 руб.</b></div></div><div class="rec-row"><img src="assets/jars.jpg" width="120" height="90" data-asset="jars.jpg" alt="Банки с воздухом"><div><a href="#" class="scare-link">Банки с воздухом</a><b>50 руб.</b><small>Воздух 1998 года.</small></div></div></section>
   </main>
   </section>
   <footer class="site-footer"><div class="footer-links"><a class="scare-link" href="#">О сайте</a><a class="scare-link" href="#">Помощь</a><a class="scare-link" href="#">Правила размещения</a><a class="scare-link" href="#">Обратная связь</a><a class="scare-link" href="#">Реклама на сайте</a><a class="scare-link" href="#">Мобильная версия</a></div><div>© КРОВИТО, 2012. Вымышленный пародийный сайт, не связан с Авито.</div></footer>
@@ -1152,8 +1196,9 @@ async function startMusic(){await audioData;if(buffer&&context?.state==='running
 function updateMusic(){$('music-toggle').textContent=musicOn?'Звук: вкл.':'Включить трек';$('music-toggle').setAttribute('aria-label',musicOn?'Приостановить музыку':'Включить трек')}
 $('music-toggle').onclick=async()=>{if(musicSource){await(musicOn?context.suspend():context.resume());musicOn=!musicOn;updateMusic()}else if(!track.paused){track.pause();musicOn=false;updateMusic()}else{await track.play().then(()=>musicOn=true).catch(()=>musicOn=false);updateMusic()}};
 function makeGlitches(){glitches=document.createElement('div');glitches.className='glitch-layer';glitches.setAttribute('aria-hidden','true');const source=document.querySelector('.reference-page');for(let i=0;i<3;i++){const strip=document.createElement('div');strip.className='glitch-fragment';const wrap=document.createElement('div');wrap.style.top=(-scrollY)+'px';const clone=source.cloneNode(true);clone.querySelectorAll('[id]').forEach(e=>e.removeAttribute('id'));clone.querySelectorAll('input,button,select,a').forEach(e=>e.tabIndex=-1);wrap.append(clone);strip.append(wrap);strip.hidden=true;glitches.append(strip)}document.body.append(glitches)}
-function render(){if(!active)return;let t=video.currentTime||0;const elapsed=(performance.now()-started)/1000;if(t>=3){finish();return};
- if(video.readyState>=2){pc.drawImage(video,0,0,960,672);const rgb=pc.getImageData(0,0,480,672),alpha=pc.getImageData(480,0,480,672);for(let i=0;i<rgb.data.length;i+=4)rgb.data[i+3]=alpha.data[i]<16?0:alpha.data[i]>239?255:Math.round((alpha.data[i]-16)*255/223);draw.putImageData(rgb,0,0)}
+function render(){if(!active)return;let t=video.currentTime||0;
+ if(!video.paused&&t>=3){finish();return};
+ if(video.readyState>=2){try{pc.drawImage(video,0,0,960,672);const rgb=pc.getImageData(0,0,480,672),alpha=pc.getImageData(480,0,480,672);for(let i=0;i<rgb.data.length;i+=4)rgb.data[i+3]=alpha.data[i]<16?0:alpha.data[i]>239?255:Math.round((alpha.data[i]-16)*255/223);draw.putImageData(rgb,0,0)}catch(err){/* keep the static wolf poster if a video frame is unavailable */}}
  canvas.style.setProperty('--wolf-scale',String(1+Math.min(t/4,1)*.045));canvas.style.setProperty('--wolf-x',Math.sin(t*9)*1.1+'px');canvas.style.setProperty('--wolf-y',Math.sin(t*7)*1.3+'px');
  document.body.style.setProperty('--shake-x',[0,1,0,-1,0,0,1,0][Math.floor(t*7)%8]+'px');document.body.style.setProperty('--shake-y',Math.sin(t*11)>.75?'1px':'0px');
  const faults=[[.8,.18,31,1.8,10],[2,.2,66,2.4,-12],[3.3,.16,17,1.4,9]];
@@ -1161,10 +1206,37 @@ function render(){if(!active)return;let t=video.currentTime||0;const elapsed=(pe
  raf=requestAnimationFrame(render)
 }
 function finish(){if(finished)return;finished=true;active=false;clearTimeout(timer);cancelAnimationFrame(raf);video.pause();$('ending').hidden=false;$('ending').inert=false;$('scare').hidden=true;glitches?.remove();document.body.classList.remove('scaring');startMusic();$('ending').querySelector('a').focus({preventScroll:true})}
-function trigger(e){e?.preventDefault();if(active||finished)return;active=true;prepareAudio();$('viewer').hidden=true;makeGlitches();document.body.style.overflow='hidden';document.body.classList.add('scaring');$('scare').hidden=false;draw.clearRect(0,0,480,672);if(poster.complete)draw.drawImage(poster,0,0,480,672);video.currentTime=0;video.volume=0.5625;video.muted=false;started=performance.now();video.play().then(()=>{raf=requestAnimationFrame(render)}).catch(finish);timer=setTimeout(finish,3000)}
+function trigger(e){
+ e?.preventDefault();
+ if(active||finished)return;
+ active=true;
+ $('viewer').hidden=true;$('viewer').inert=true;
+ $('scare').hidden=false;
+ draw.clearRect(0,0,480,672);
+ if(poster.complete&&poster.naturalWidth)draw.drawImage(poster,0,0,480,672);
+ video.currentTime=0;video.volume=0.5625;video.muted=false;
+ started=performance.now();
+ // Start playback immediately within the user gesture, before heavy DOM cloning.
+ const begin=video.play();
+ raf=requestAnimationFrame(render);
+ timer=setTimeout(finish,9000); // buffering fallback; normally replaced on 'playing'
+ Promise.resolve(begin).catch(()=>{
+   if(!active)return;
+   video.muted=true;
+   video.play().catch(()=>{
+     if(!active)return;
+     clearTimeout(timer);timer=setTimeout(finish,3200); // retain the wolf poster instead of disappearing
+   });
+ });
+ document.body.style.overflow='hidden';
+ document.body.classList.add('scaring');
+ try{makeGlitches()}catch(err){/* the scare must run even if decorative glitches fail */}
+ prepareAudio();
+}
 
+video.addEventListener('playing',()=>{if(!active)return;started=performance.now();clearTimeout(timer);timer=setTimeout(finish,3300)});
 video.addEventListener('ended',finish);
-video.addEventListener('error',()=>{if(active)finish()});
+video.addEventListener('error',()=>{if(active){clearTimeout(timer);timer=setTimeout(finish,3200)}});
 document.querySelectorAll('a.scare-link').forEach(e=>e.addEventListener('click',trigger));
 document.querySelector('.message-button').addEventListener('click',trigger);
 document.addEventListener('keydown',e=>{if(e.key==='Escape'&&active)finish()});
