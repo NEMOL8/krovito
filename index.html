@@ -745,6 +745,29 @@ body:before{opacity:.048!important;background-image:radial-gradient(#000 0.38px,
   .description{font-size:15px!important}
 }
 </style>
+
+<style id="v24-grid-repair">
+/* v24: v22 switched to a two-column design but old display:contents
+   and three-column placements remained in the cascade. */
+@media (min-width:1011px) {
+  .listing-grid{display:grid!important;grid-template-columns:minmax(0,1fr) 300px!important;grid-template-rows:auto auto!important;align-items:start!important;gap:14px 22px!important}
+  .listing-grid>.primary-column{display:block!important;grid-column:1!important;grid-row:1!important;min-width:0!important}
+  .listing-grid>.side-column{display:block!important;grid-column:2!important;grid-row:1!important;min-width:0!important}
+  .listing-grid .listing-photo{display:block!important;width:100%!important;max-width:100%!important;min-width:0!important}
+  .listing-grid .listing-photo img{display:block!important;width:100%!important;max-width:100%!important;height:auto!important;max-height:none!important;object-fit:contain!important}
+  .listing-grid .gallery-under,.listing-grid .description,.listing-grid .actions,.listing-grid .seller-card,.listing-grid .warning-box{grid-column:auto!important;grid-row:auto!important}
+  .listing-grid>.recommend{grid-column:1/-1!important;grid-row:2!important;display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;align-items:start!important;gap:0 14px!important;min-width:0!important;margin-top:2px!important;padding:0 0 6px!important}
+  .listing-grid>.recommend>h2{grid-column:1/-1!important;margin:0!important}
+  .listing-grid>.recommend>.rec-row{min-width:0!important;border-bottom:0!important}
+}
+@media (min-width:1011px) and (max-width:1279px){
+  .listing-grid{grid-template-columns:minmax(0,1fr) 278px!important;gap:12px 16px!important}
+}
+@media (max-width:1010px){
+  .listing-grid>.primary-column,.listing-grid>.side-column{display:block!important;min-width:0!important}
+  .listing-grid>.recommend{display:block!important;grid-column:1!important;grid-row:auto!important;margin-top:4px!important}
+}
+</style>
 </head>
 <body>
 <a href="#listing-main" class="skip-to-listing">Перейти к объявлению</a>
@@ -775,8 +798,8 @@ body:before{opacity:.048!important;background-image:radial-gradient(#000 0.38px,
     </article>
     <aside class="side-column">
       <section class="seller-card"><h2><a href="#" class="scare-link">Герман</a></h2><p>Частное лицо</p><p>Москва</p><a href="#" class="phone-button scare-link"><span aria-hidden="true">☎</span> Показать телефон</a><button type="button" class="message-button">Написать продавцу</button><div class="seller-extra">Другие объявления: <a href="#" class="scare-link">6</a><br>На сайте с октября 2012 г.<br>Последний вход: давно</div><small>частное лицо, без гарантий</small></section><div class="warning-box"><strong>Советы по безопасности</strong>Осматривайте товар при встрече. Не переводите деньги заранее. Если товар смотрит в ответ — завершайте сделку без промедления.</div>
-      <section class="recommend"><h2>Похожие объявления</h2><div class="rec-row"><img src="assets/meat-grinder.jpg" width="120" height="90" data-asset="meat-grinder.jpg" alt="Мясорубка"><div><a href="#" class="scare-link">Мясорубка для мяса</a><b>300 руб.</b></div></div><div class="rec-row"><img src="assets/television.jpg" width="120" height="90" data-asset="television.jpg" alt="Телевизор"><div><a href="#" class="scare-link">Телевизор (работает только СТС)</a><b>1 500 руб.</b></div></div><div class="rec-row"><img src="assets/jars.jpg" width="120" height="90" data-asset="jars.jpg" alt="Банки с воздухом"><div><a href="#" class="scare-link">Банки с воздухом</a><b>50 руб.</b><small>Воздух 1998 года.</small></div></div></section>
     </aside>
+    <section class="recommend"><h2>Похожие объявления</h2><div class="rec-row"><img src="assets/meat-grinder.jpg" width="120" height="90" data-asset="meat-grinder.jpg" alt="Мясорубка"><div><a href="#" class="scare-link">Мясорубка для мяса</a><b>300 руб.</b></div></div><div class="rec-row"><img src="assets/television.jpg" width="120" height="90" data-asset="television.jpg" alt="Телевизор"><div><a href="#" class="scare-link">Телевизор (работает только СТС)</a><b>1 500 руб.</b></div></div><div class="rec-row"><img src="assets/jars.jpg" width="120" height="90" data-asset="jars.jpg" alt="Банки с воздухом"><div><a href="#" class="scare-link">Банки с воздухом</a><b>50 руб.</b><small>Воздух 1998 года.</small></div></div></section>
   </main>
   <footer class="site-footer"><div class="footer-links"><a class="scare-link" href="#">О сайте</a><a class="scare-link" href="#">Помощь</a><a class="scare-link" href="#">Правила размещения</a><a class="scare-link" href="#">Обратная связь</a><a class="scare-link" href="#">Реклама на сайте</a><a class="scare-link" href="#">Мобильная версия</a></div><div>© КРОВИТО, 2012. Вымышленный пародийный сайт, не связан с Авито.</div></footer>
 </div>
