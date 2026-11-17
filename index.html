@@ -246,6 +246,40 @@ body{background:#d6d2d8}
   }
 }
 </style>
+
+<style id="v17-bigger-lower-blocks">
+/* v17: larger listing text and full-width related ads; other site behavior intact. */
+@media (min-width:1011px){
+ .listing-grid{grid-template-rows:auto auto auto auto;gap:6px 14px !important;padding-bottom:14px !important}
+ .actions{grid-column:2;grid-row:3;margin:6px 0 0 !important;padding:8px 0 !important;font-size:14px !important;line-height:1.35;gap:10px 18px !important}
+ .warning-box{grid-column:3;grid-row:3;padding:9px 10px !important;font-size:11px !important;line-height:1.35 !important}
+ .recommend{grid-column:1 / 4;grid-row:4;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 18px;padding:0 14px 10px;background:#fff}
+ .recommend h2{grid-column:1/-1;margin:0 -14px;padding:8px 12px !important;font-size:17px !important}
+ .rec-row{grid-template-columns:120px minmax(0,1fr);gap:14px;padding:12px 0;border-bottom:0;align-items:start}
+ .rec-row img{width:120px;height:88px;aspect-ratio:4/3}
+ .rec-row a{font-size:17px;line-height:1.1}
+ .rec-row b{font-size:18px;margin-top:7px}
+ .rec-row small{font-size:13px;margin-top:4px}
+}
+@media (max-width:1010px){
+ .actions{font-size:12px;gap:8px 14px}
+ .recommend h2{font-size:17px}
+ .rec-row{grid-template-columns:100px minmax(0,1fr);gap:12px}
+ .rec-row img{width:100px;height:74px}
+ .rec-row a{font-size:14px}
+ .rec-row b{font-size:15px}
+ .rec-row small{font-size:12px}
+}
+@media (max-width:560px){
+ .actions{font-size:11px;gap:7px 10px}
+ .recommend h2{font-size:16px}
+ .rec-row{grid-template-columns:86px minmax(0,1fr);gap:10px}
+ .rec-row img{width:86px;height:64px}
+ .rec-row a{font-size:13px}
+ .rec-row b{font-size:14px}
+ .rec-row small{font-size:11px}
+}
+</style>
 </head>
 <body>
 <div class="site-layout reference-page">
