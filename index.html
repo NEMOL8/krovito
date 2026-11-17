@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="author" content="Герман Иващенко">
+<meta name="description" content="КРОВИТО — пародийный сайт объявлений. Продам голову. Б/у.">
+<title>КРОВИТО — Продам голову. Б/у.</title>
+<style>
+:root{--violet:#6e3ea6;--acid:#86d743;--link:#2f76a6;--bluebg:#d9e7ef;--blue2:#ebf3f7;--border:#c9d5dd;--text:#202020;--muted:#7c8390}
+*{box-sizing:border-box}html,body{margin:0;min-width:0}body{background:#e5e5e5;color:var(--text);font:12px/1.35 Tahoma,Arial,Helvetica,sans-serif}
+body:before{content:'';position:fixed;inset:0;pointer-events:none;opacity:.035;background-image:radial-gradient(#000 0.45px, transparent 0.45px);background-size:4px 4px;mix-blend-mode:multiply}
+button,input,select{font:inherit}button{cursor:pointer}[hidden]{display:none!important}a{color:var(--link);text-decoration:underline}a:hover{text-decoration:none}
+.site-layout{width:min(1000px,calc(100% - 18px));margin:0 auto;background:#fff;border:1px solid #d0d0d0;box-shadow:0 0 0 1px #f6f6f6 inset;position:relative}
+.site-layout:after{content:'';position:absolute;inset:0;pointer-events:none;opacity:.03;background:repeating-linear-gradient(180deg,#0000,#0000 3px,#000 4px)}
+.top-strip{display:flex;justify-content:space-between;align-items:center;padding:4px 10px;border-bottom:1px solid #e1e7eb;background:#f8fafb;font-size:11px;color:#7f8792}.top-strip span{display:flex;gap:14px;flex-wrap:wrap}.top-strip a{color:#75879b;text-decoration:none}
+.old-header{display:flex;align-items:flex-start;gap:20px;padding:8px 10px 6px;border-bottom:1px solid #e0e6ea;background:#fff}
+.brand{display:flex;flex:0 0 auto;flex-direction:column;align-items:flex-start;text-decoration:none;color:#430063}.site-logo{display:block;width:225px;height:58px;object-fit:contain;image-rendering:auto;filter:saturate(.94)}.brand-tagline{font-size:10px;color:#6d6d6d;margin-top:-4px;margin-left:8px;white-space:nowrap}
+.nav-stack{display:flex;flex-direction:column;gap:7px;flex:1;min-width:0}.header-nav,.category-tabs{display:flex;align-items:center;gap:18px;white-space:nowrap;flex-wrap:wrap}.header-nav a{font-size:14px;text-decoration:none;color:#4e86ad}.category-tabs{font-size:13px;padding-top:2px}.category-tabs a{text-decoration:none;color:#4a86a9}.category-tabs a.active{font-weight:bold;color:#5f0f7c}.category-tabs .more{color:#7e8791}
+.header-tools{display:flex;align-items:flex-start;gap:16px;white-space:nowrap;padding-top:3px}.header-tools>a{text-decoration:none}.favorite{font-size:13px;color:#7d8790}.star{color:#efac3a;font-size:16px}.account{display:flex;align-items:flex-start;gap:5px;line-height:1.15;font-size:12px;color:#69819a}.account .avatar{color:#a5a5a5;font-size:14px}.account strong{font-weight:normal;color:#69819a}.account small{display:block;color:#98a1aa;font-size:10px;margin-top:1px}
+.post-ad{display:block;color:#fff;line-height:1.05;font-size:12px;font-weight:bold;padding:8px 11px;background:linear-gradient(#7fc5f6,#4c98d2);border:1px solid #4e8dbe;border-radius:2px;box-shadow:inset 0 1px #b5e0ff;min-width:126px;text-align:center}
+.mobile-city,.menu-toggle,.mobile-menu-panel{display:none}
+.old-search{padding:8px 10px 9px;background:linear-gradient(#e7f2f7,#d7e7ef);border-top:1px solid #f9fcfd;border-bottom:1px solid #cad5dc}.search-fields{display:grid;grid-template-columns:175px minmax(180px,1fr) 170px 78px;align-items:stretch;gap:7px}.search-fields input,.search-fields select{height:25px;min-width:0;width:100%;padding:3px 6px;color:#222;background:#fff;border:1px solid #9da7ac;box-shadow:inset 0 1px 1px #00000012;border-radius:0;font-size:12px}.search-fields button{height:25px;background:#f6f6f6;border:1px solid #989898;color:#222;border-radius:0;font-size:12px}
+.search-options{display:flex;gap:26px;margin-top:7px;color:#363238;font-size:12px}.search-options label{display:flex;align-items:center;gap:5px;cursor:pointer}.search-options input{width:13px;height:13px;margin:0;accent-color:#6f3b97}.search-feedback{padding:5px 10px;background:#f8f3ff;border-top:1px solid #ddd;color:#6a2b92;font-size:11px}
+.ad-strip{display:flex;justify-content:space-between;gap:12px;align-items:center;min-height:34px;padding:8px 10px;background:#f6f6f6;border-top:1px solid #fff;border-bottom:1px solid #e2e2e2;color:#666;font-size:11px}.ad-strip small{color:#aaa}.ad-strip .horror{color:#6d3c93}
+.old-breadcrumb{display:flex;align-items:center;gap:9px;flex-wrap:wrap;min-height:31px;padding:7px 10px;border-bottom:1px solid #e5e5e5;font-size:11px;color:#666}.old-breadcrumb>span{color:#b0b0b0;font-size:13px;font-weight:700}.old-breadcrumb a{color:#6e7f92}
+.city-links{padding:5px 10px 7px;border-bottom:1px solid #efefef;font-size:11px;color:#888}.city-links a{margin-right:12px;color:#4c86aa;text-decoration:none}
+.listing-info{display:flex;justify-content:space-between;color:#8b8691;font-size:10px;padding:7px 10px 1px;gap:12px;flex-wrap:wrap}.listing-title{display:flex;align-items:baseline;justify-content:space-between;gap:16px;margin:0;padding:0 10px 9px}.listing-title h1{font-size:29px;line-height:1.1;font-weight:bold;letter-spacing:-.2px;margin:0}.price{font-size:28px;white-space:nowrap;font-weight:bold;color:#222}
+.listing-grid{display:grid;grid-template-columns:minmax(0,1fr) 255px;gap:16px;align-items:start;min-width:0;padding:0 10px 22px}.primary-column,.side-column{min-width:0}.listing-photo{display:block;border:1px solid #d3d3d3;background:#f6f6f6;padding:0;margin:0;line-height:0;width:100%;cursor:zoom-in;position:relative;overflow:hidden}.listing-photo img{display:block;width:100%;height:auto;object-fit:contain;image-rendering:auto;filter:saturate(.88) contrast(1.02)}.listing-photo:after{content:'';position:absolute;inset:0;pointer-events:none;opacity:.07;background:repeating-linear-gradient(180deg,#fff0,#fff0 2px,#000 3px)}
+.gallery-under{display:flex;align-items:end;justify-content:space-between;margin:6px 0 16px;color:#9e9e9e;font-size:10px}.thumb-button{border:0;background:none;padding:0;cursor:zoom-in}.thumb{display:block;width:96px;height:55px;object-fit:cover;border:1px solid #9d9d9d;padding:1px;background:#fff;filter:saturate(.86)}
+.photo-meta{margin:-6px 0 15px;font-size:10px;color:#8d8d8d}.photo-meta a{font-size:10px;color:#5c7da0}
+.description{font-size:13px;line-height:1.42;border-top:1px dotted #cfcfcf;padding-top:8px}.description p{margin:8px 0 14px}.spec-table{font-size:12px;margin-bottom:9px}.spec-table>div{margin:3px 0}.spec-table span{color:#666;display:inline-block;min-width:82px}
+.details-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px 16px;margin:10px 0 14px;padding:8px 10px;border:1px solid #ececec;background:#fafafa;font-size:11px}.details-grid div b{display:block;color:#666;font-weight:normal;margin-bottom:2px}.details-grid div span{color:#222}
+.actions{margin-top:18px;padding:9px 0;border-top:1px dotted #ddd;display:flex;gap:8px 15px;flex-wrap:wrap;font-size:11px}
+.seller-card{background:#f7f8fb;border:1px solid #d8dee7;padding:12px 14px 13px;margin-bottom:14px}.seller-card h2{margin:0 0 8px;font-size:20px;font-weight:bold}.seller-card h2 a{text-decoration:none;color:#6f2f98}.seller-card p{margin:4px 0;font-size:13px}.seller-card small{display:block;margin-top:10px;color:#8b8590;font-size:10px}.seller-extra{margin-top:10px;padding-top:8px;border-top:1px dotted #d5d5d5;font-size:10px;color:#6f6f6f;line-height:1.45}
+.phone-button{display:block;padding:10px 7px;margin-top:13px;background:linear-gradient(#b6ee73,#8cd93f);border:1px solid #6c9b38;box-shadow:inset 0 1px #efffcc;text-align:center;color:#2d3d11;font-weight:bold;font-size:15px;text-decoration:none}.phone-button span{font-size:17px;margin-right:5px}.message-button{width:100%;padding:6px;background:#f5f5f5;border:1px solid #c8ced6;color:#5c2681;margin-top:7px;font-size:11px;text-decoration:underline}
+.warning-box{border:1px solid #e0d3a2;background:#fff9e8;padding:8px 9px;color:#6f6035;font-size:10px;line-height:1.4;margin-bottom:14px}.warning-box strong{display:block;color:#5a4a1c;margin-bottom:4px}
+.recommend{border:1px solid #d4d8de;padding:0 10px 4px;background:#fff}.recommend h2{font-size:16px;margin:0 -10px;padding:7px 9px;background:#f2f6f8;border-bottom:1px solid #d4d8de}.rec-row{display:grid;grid-template-columns:86px minmax(0,1fr);gap:10px;padding:9px 0;border-bottom:1px solid #efefef;align-items:start}.rec-row:last-child{border-bottom:0}.rec-row img{display:block;width:86px;height:66px;object-fit:cover;border:1px solid #d7d7d7;filter:saturate(.86)}.rec-row a{font-size:12px;line-height:1.18}.rec-row b{display:block;color:#222;font-size:13px;margin-top:4px}.rec-row small{display:block;font-size:10px;color:#929292;margin-top:3px}
+.site-footer{padding:12px 10px 16px;border-top:1px solid #dedede;color:#939093;font-size:10px;line-height:1.55;background:#fafafa}.footer-links{display:flex;flex-wrap:wrap;gap:7px 14px;margin-bottom:5px}.footer-links a{color:#6c8297;text-decoration:none}
+.viewer,.scare,.ending{position:fixed;inset:0;color:#e8e5e5;z-index:20}.viewer{z-index:40;background:#0b0610;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:16px;gap:8px}.viewer-photo{display:block;max-width:min(100%,960px);height:auto;max-height:78dvh;object-fit:contain;filter:saturate(.88) contrast(1.02)}.viewer p{font:11px monospace;color:#aaa;margin:7px}.close{position:absolute;top:12px;right:18px;background:transparent;color:#b1ff38;font-size:35px;border:0;line-height:1;padding:6px 10px}
+.scare{z-index:30;background:transparent;display:grid;place-items:center;overflow:hidden;pointer-events:auto}#wolf-canvas{display:block;height:min(96dvh,1225px);max-width:96vw;object-fit:contain;transform:scale(var(--wolf-scale,1)) translate(var(--wolf-x,0px),var(--wolf-y,0px));filter:none}#scare-video{position:absolute;width:1px;height:1px;opacity:0;pointer-events:none}body.scaring .site-layout{filter:brightness(.84) contrast(.98);transform:translate(var(--shake-x,0px),var(--shake-y,0px));will-change:transform}
+.glitch-layer{position:fixed;inset:0;z-index:25;pointer-events:none;overflow:hidden;contain:strict;filter:brightness(.84)}.glitch-fragment{position:absolute;inset:0;overflow:hidden;transform:translateX(var(--offset,8px));filter:drop-shadow(2px 0 #9e000055) drop-shadow(-2px 0 #00a3aa40)}.glitch-fragment>div{position:absolute;left:0;width:100%}
+.ending{z-index:35;background:#020202;display:grid;place-items:center;overflow:hidden;padding:24px}#ending .end-link{display:block;width:min(90vw,1400px);line-height:0;z-index:2}#ending .end-link img{display:block;width:100%;height:auto}#ending .exit-link{position:absolute;left:50%;top:calc(50% + min(17vw,210px));transform:translateX(-50%);padding:10px 16px;z-index:3}#ending .exit-link img{display:block;width:clamp(140px,18vw,230px);height:auto}#music-toggle{position:absolute;bottom:13%;left:50%;transform:translateX(-50%);border:0;background:none;text-decoration:underline;color:#8d7878;font:12px monospace}
+:focus-visible{outline:2px solid #7f5ba4;outline-offset:1px}
+@media(max-width:1010px){.site-layout{width:100%;border-left:0;border-right:0}.old-header{gap:10px;min-height:70px}.nav-stack,.header-tools,.top-strip{display:none}.brand{margin-right:auto}.site-logo{width:210px;height:58px}.mobile-city{display:block;font-size:12px;white-space:nowrap;text-decoration:none;margin-left:auto;color:#6f8195}.menu-toggle{display:block;font-size:20px;color:#4f008b;background:#f3f3f3;border:1px solid #b7b7b7;min-width:34px;min-height:32px;border-radius:0}.mobile-menu-panel{display:block;background:#f7f7f7;border-bottom:1px solid #ddd;padding:6px 10px}.mobile-menu-panel a{display:block;padding:8px 2px;border-top:1px solid #ececec}.mobile-menu-panel a:first-child{border-top:0}.old-search{padding:8px}.search-fields{grid-template-columns:1fr 1fr;gap:7px}.search-fields>*:first-child{grid-column:1/-1}.search-fields button{grid-column:2/3}.listing-grid{grid-template-columns:1fr;padding:0 10px 16px}.seller-card,.recommend{max-width:none}.old-breadcrumb,.listing-info,.listing-title,.site-footer,.ad-strip,.city-links{padding-left:10px;padding-right:10px}}
+@media(max-width:560px){body{font-size:12px}.old-search{padding:8px 8px 9px}.search-fields{grid-template-columns:1fr}.search-fields>*:first-child,.search-fields button{grid-column:auto}.search-options{gap:12px;flex-wrap:wrap}.listing-title{flex-direction:column;align-items:flex-start;gap:3px}.listing-title h1{font-size:26px}.price{font-size:25px}.site-logo{width:190px;height:52px}.gallery-under{margin-bottom:12px}.thumb{width:90px}.details-grid{grid-template-columns:1fr}.ad-strip{display:block;line-height:1.4}.city-links a{display:inline-block;margin-bottom:4px}}
+
+/* v10 / The website is still a responsive, accessible DOM. Appearance intentionally
+   degraded like multiple JPEG exports of a 360p 2012 browser recording. */
+:root{--violet:#7900d9;--acid:#7eff00;--link:#694096;--border:#afa5b4}
+html,body{width:100%;max-width:100%;overflow-x:clip}
+body{background:#d6d2d8}
+.site-layout{width:98%;max-width:none;border:1px solid #bbb4c1;filter:blur(1.05px) contrast(.94) saturate(.79);isolation:isolate}
+.site-layout::before{content:"";position:absolute;inset:0;z-index:50;pointer-events:none;background-image:url("data:image/png;base64,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");background-size:520px 390px;background-repeat:repeat;image-rendering:pixelated;opacity:.32;mix-blend-mode:multiply}
+.site-layout::after{z-index:51;opacity:.10;pointer-events:none;background:repeating-linear-gradient(180deg,transparent 0,transparent 3px,#3524464c 4px,#aaf33124 5px,transparent 7px)}
+/* Deliberately coarse native image assets. Their displayed size still follows the layout. */
+.site-logo{width:435px;height:auto;aspect-ratio:3/1;max-width:100%;object-fit:contain;image-rendering:auto;filter:contrast(1.04) saturate(.96)}
+.brand{width:440px;max-width:100%;align-items:center}
+.brand-tagline{font-size:15px;color:#562a78;margin-top:-6px;margin-left:0;text-align:center}
+.old-header{display:grid;grid-template-columns:440px minmax(0,1fr);gap:8px 22px;align-items:center;min-height:164px;padding:12px 18px 14px;background:linear-gradient(#faf8fb,#f4f0f5);border-bottom:2px solid #ac9cae}
+.brand{grid-column:1;grid-row:1/3}
+.nav-stack{grid-column:2;grid-row:1;min-width:0;gap:13px;justify-content:center}
+.header-tools{grid-column:2;grid-row:2;justify-content:flex-end;align-items:center;gap:22px;padding:0}
+.header-nav,.category-tabs{gap:clamp(12px,2vw,28px);justify-content:space-around;width:100%}
+.header-nav a{font-size:clamp(16px,1.22vw,22px);color:#62458e}
+.category-tabs a{font-size:clamp(13px,1.04vw,18px);color:#647e95}
+.favorite{font-size:15px}.account{font-size:14px}.post-ad{min-width:148px;padding:11px 15px;background:linear-gradient(#922bc3,#66158d);border:1px solid #4d166e;font-size:16px;color:#fff}
+.old-search{background:linear-gradient(#d5ffa9,#a4dc6e);border-top:1px solid #9868b1;border-bottom:2px solid #7c44a4;padding:14px 16px 12px}
+.search-fields{grid-template-columns:minmax(120px,1.4fr) minmax(140px,1.2fr) minmax(120px,1fr) 115px;gap:14px}
+.search-fields input,.search-fields select,.search-fields button{height:36px;font-size:16px;border-color:#95869f;box-shadow:inset 0 1px 3px #0002}
+.search-fields button{background:linear-gradient(#f4eafd,#e0c8f3);border:1px solid #7b3eab;color:#3e185f}
+.search-options{font-size:14px;gap:30px;margin-top:10px}
+.ad-strip{background:#f3f0f3;border-bottom-color:#beb6c1;color:#777;min-height:39px;font-size:12px}
+.old-breadcrumb{font-size:13px;padding:11px 15px}
+.city-links{padding:9px 15px;font-size:12px}
+.listing-info{font-size:12px;padding:10px 16px 5px}
+.listing-title{padding:0 16px 14px}.listing-title h1{font-size:clamp(30px,2.4vw,49px)}.price{font-size:clamp(28px,2.3vw,47px)}
+.listing-grid{grid-template-columns:minmax(0,1fr) minmax(300px,29%);gap:clamp(14px,2vw,36px);padding:0 16px 26px}
+.listing-photo{background:#efe9e8;border:1px solid #a49ba3}
+.listing-photo img{width:100%;height:auto;image-rendering:pixelated;filter:brightness(.94) contrast(1.04) saturate(.9)}
+.thumb{image-rendering:pixelated;width:115px;height:67px}
+.description{font-size:clamp(14px,1.05vw,20px);border-top:1px dotted #a49aa8}
+.spec-table{font-size:clamp(13px,1vw,18px)}
+.details-grid{font-size:clamp(12px,.93vw,16px)}
+.seller-card{background:#eee6f4;border-color:#bda8c7;padding:clamp(14px,1.5vw,26px)}
+.seller-card h2{font-size:clamp(21px,1.65vw,32px)}.seller-card p{font-size:clamp(14px,1.1vw,19px)}
+.phone-button{background:linear-gradient(#c3ff71,#84d927);border:1px solid #68399c;font-size:clamp(16px,1.25vw,23px);padding:12px}
+.message-button{font-size:13px}.recommend h2{font-size:clamp(17px,1.4vw,24px)}.recommend{background:#fdfdff}
+.rec-row{grid-template-columns:clamp(88px,8.3vw,160px) minmax(0,1fr);gap:15px;padding:13px 0}
+.rec-row img{width:100%;height:auto;aspect-ratio:4/3;image-rendering:pixelated}
+.rec-row a{font-size:clamp(13px,1.05vw,19px)}.rec-row b{font-size:clamp(13px,1vw,19px)}
+.site-footer{padding:18px 16px}
+/* On moderate screens: two header rows. Do not shrink desktop logo. */
+@media(min-width:1451px){
+ .old-header{grid-template-columns:440px minmax(0,1fr) minmax(390px,auto);min-height:150px;gap:18px}
+ .brand{grid-column:1;grid-row:1/3}.nav-stack{grid-column:2;grid-row:1/3}
+ .header-tools{grid-column:3;grid-row:1/3;gap:16px;justify-content:flex-end}
+}
+/* On mobile we keep the same responsive HTML and a larger pixelated logo. */
+@media(max-width:1010px){
+ .site-layout{width:100%;max-width:100%;border:0}
+ .old-header{display:flex;align-items:center;gap:10px;min-height:98px;padding:8px 12px 10px}
+ .brand{width:auto;max-width:calc(100% - 52px);margin-right:auto}
+ .site-logo{width:min(76vw,300px);height:auto;aspect-ratio:3/1}
+ .brand-tagline{font-size:clamp(10px,2.9vw,13px);margin:0}
+ .header-tools,.nav-stack,.top-strip{display:none}
+ .mobile-city{display:none}
+ .menu-toggle{display:block;flex:0 0 39px;min-width:39px;min-height:38px}
+ .old-search{padding:9px 10px}
+ .search-fields{grid-template-columns:minmax(0,1fr) minmax(120px,1fr);gap:8px}
+ .search-fields>*:first-child{grid-column:1/-1}
+ .search-fields button{grid-column:2;min-width:0}
+ .search-fields input,.search-fields select,.search-fields button{height:34px;font-size:15px}
+ .listing-grid{grid-template-columns:minmax(0,1fr);gap:12px;padding:0 12px 22px}
+ .old-breadcrumb,.listing-info,.listing-title,.site-footer,.ad-strip,.city-links{padding-left:12px;padding-right:12px}
+}
+@media(max-width:560px){
+ .old-header{min-height:86px;padding:6px 10px}
+ .site-logo{width:min(75vw,295px)}
+ .search-fields{grid-template-columns:minmax(0,1fr)}
+ .search-fields>*:first-child,.search-fields button{grid-column:1}
+ .listing-title h1{font-size:27px}.price{font-size:27px}
+ .listing-grid{padding:0 10px 20px}.description{font-size:14px}
+ .old-breadcrumb,.listing-info,.listing-title,.site-footer,.ad-strip,.city-links{padding-left:10px;padding-right:10px}
+ .seller-card{padding:14px}
+}
+
+/* v11: ease off v10's excessive 360p compression; keep aged-web character. */
+.site-layout{filter:blur(.38px) contrast(.985) saturate(.91)}
+.site-layout::before{opacity:.135;background-size:680px 520px}
+.site-layout::after{opacity:.035}
+.listing-photo img{image-rendering:auto;filter:brightness(.985) contrast(1.025) saturate(.93)}
+.rec-row img,.thumb{image-rendering:auto}
+/* Custom 2012-style red hand for actual interactive controls. */
+:is(a[href],button,select,input[type="checkbox"],input[type="submit"],label,[role="button"]),
+:is(a[href],button,select,input[type="checkbox"],input[type="submit"],label,[role="button"]):hover{
+ cursor:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAABFklEQVR42u2XQQ6CMBBF/xg3HgHdGBI4nwsTzsDCxA2Xw2jcqEdwWRdliDQ0FWgNLZ0NhFAyffw/MwViTAsauiBDIvqeX/AiFwmu5k5wPXZhfTrKm6oCAOQ3SdY2ydkTjAnOLkHRRCQYE3RdB3WR07a344ytj8shWKcbwxupkB3nPaiH+2+SDInQTTBjSX/TNn3fPw2qu+Hd8rTiSrO6achfF6s7NLt0WJzvDwDAYb/rfv8q+zgRUWB1sCjktSw7k7SrTuSvBtlF7KpWG0xOJbn0aYZ+Pf+2JJkghyWS3KNr8YRXLjbOaEzSdh0MhqCxDmpd7eqXNuT8d/G/NKnTXrhnElWTtqYdlVy4GtRqstHQ4gjGmBofzdxktkW74ikAAAAASUVORK5CYII=") 14 4,pointer !important;
+}
+
+/* v12: one-screen desktop listing (no clipping, no scaled/canvas UI). */
+@media (min-width:1011px){
+  .top-strip{display:none}
+  .old-header{min-height:112px;padding:4px 11px 5px;gap:2px 11px;grid-template-columns:350px minmax(0,1fr)}
+  .brand{width:345px;max-width:100%}.site-logo{width:340px;max-width:100%;height:auto}.brand-tagline{font-size:11px;margin-top:-5px}
+  .nav-stack{gap:3px}.header-nav,.category-tabs{gap:10px;justify-content:flex-start}
+  .header-nav a{font-size:14px}.category-tabs a{font-size:12px}
+  .header-tools{gap:13px;justify-content:flex-end;align-items:center}
+  .post-ad{min-width:120px;font-size:13px;padding:6px 8px}.favorite{font-size:12px}.account{font-size:12px}
+  .old-search{padding:6px 11px 6px}.search-fields{gap:9px;grid-template-columns:minmax(130px,1.4fr) minmax(130px,1.2fr) minmax(130px,1fr) 98px}
+  .search-fields input,.search-fields select,.search-fields button{height:26px;font-size:12px;padding:2px 6px}
+  .search-options{margin-top:4px;font-size:11px;gap:24px}.search-options input{width:13px;height:13px}
+  .ad-strip{min-height:24px;padding:3px 9px;font-size:10px}
+  .old-breadcrumb{min-height:25px;padding:4px 9px;font-size:11px;gap:8px}
+  .city-links{padding:2px 9px 3px;font-size:10px}
+  .listing-info{padding:4px 10px 2px;font-size:10px}
+  .listing-title{margin:0;padding:0 10px 7px;gap:12px}.listing-title h1{font-size:30px;line-height:1.1}.price{font-size:28px}
+  .listing-grid{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1.04fr) minmax(260px,.94fr);grid-template-rows:auto auto auto;gap:2px 14px;align-items:start;padding:0 10px 8px}
+  .primary-column,.side-column{display:contents}
+  .listing-photo{grid-column:1;grid-row:1;display:block}
+  .listing-photo img{width:auto;max-width:100%;height:auto;max-height:34dvh;display:block;margin:auto;object-fit:contain}
+  .gallery-under{grid-column:1;grid-row:2;margin:3px 0 2px;font-size:9px;align-items:center}
+  .thumb{width:70px;height:39px;border-width:1px}
+  .description{grid-column:2;grid-row:1/span 2;margin:0;border:0;padding:0;font-size:12px;line-height:1.26}
+  .description p{margin:5px 0 7px}
+  .spec-table{font-size:11px}.spec-table>div{margin:2px 0}.spec-table span{min-width:72px}
+  .details-grid{grid-template-columns:1fr 1fr;gap:3px 6px;margin:5px 0;padding:5px 6px;font-size:10px}
+  .actions{grid-column:2;grid-row:3;margin:3px 0 0;padding:5px 0;gap:5px 12px;font-size:10px}
+  .seller-card{grid-column:3;grid-row:1;padding:9px 12px 10px;margin:0}
+  .seller-card h2{font-size:19px;margin:0 0 5px}.seller-card p{font-size:12px;margin:2px 0}
+  .phone-button{margin-top:8px;padding:6px 5px;font-size:13px}.phone-button span{font-size:15px}
+  .message-button{margin-top:5px;padding:5px;font-size:11px}
+  .seller-extra{margin-top:6px;padding-top:5px;font-size:9px;line-height:1.25}.seller-card small{font-size:9px;margin-top:5px}
+  .warning-box{grid-column:3;grid-row:2;margin:0;padding:6px 7px;font-size:9px;line-height:1.25}
+  .warning-box strong{margin-bottom:2px}
+  .recommend{grid-column:1;grid-row:3;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:2px 6px;padding:0 6px 4px;align-items:start}
+  .recommend h2{grid-column:1/-1;margin:0 -6px;padding:4px 7px;font-size:12px}
+  .rec-row{grid-template-columns:40px minmax(0,1fr);gap:4px;padding:3px 0;border-bottom:0;min-width:0}
+  .rec-row img{width:40px;height:34px;aspect-ratio:unset}.rec-row a{font-size:10px;line-height:1.08;word-break:break-word}.rec-row b{font-size:10px;margin-top:2px}.rec-row small{font-size:9px;margin-top:1px}
+  .site-footer{padding:6px 10px;font-size:9px;line-height:1.25}.footer-links{gap:4px 12px;margin-bottom:3px}
+}
+@media (min-width:1451px){
+  .old-header{grid-template-columns:350px minmax(0,1fr) minmax(330px,auto);min-height:110px;gap:11px}
+  .brand{grid-column:1;grid-row:1/3}.nav-stack{grid-column:2;grid-row:1/3}
+  .header-tools{grid-column:3;grid-row:1/3;gap:12px}
+}
+@media (min-width:1011px) and (max-height:790px){
+  .old-header{min-height:104px;padding-top:2px;padding-bottom:3px}
+  .brand{width:328px}.site-logo{width:324px}.brand-tagline{font-size:10px;margin-top:-6px}
+  .listing-photo img{max-height:32dvh}
+  .ad-strip{min-height:20px;padding-top:2px;padding-bottom:2px}
+  .old-breadcrumb{min-height:22px;padding-top:2px;padding-bottom:2px}
+  .listing-title{padding-bottom:4px}.listing-title h1{font-size:27px}.price{font-size:26px}
+  .gallery-under{margin:3px 0 1px}.thumb{width:62px;height:34px}
+  .site-footer{padding-top:4px;padding-bottom:4px}
+}
+/* Tall desktop: restore the large approved logo while retaining single-screen reading. */
+@media (min-width:1360px) and (min-height:850px){
+  .old-header{grid-template-columns:415px minmax(0,1fr);min-height:153px}
+  .brand{width:410px}.site-logo{width:405px}.brand-tagline{font-size:12px}
+}
+@media (min-width:1451px) and (min-height:850px){
+  .old-header{grid-template-columns:415px minmax(0,1fr) minmax(330px,auto)}
+}
+/* Short laptop: keep every element visible, not clipped or scaled. */
+@media (min-width:1011px) and (max-height:740px){
+  .old-header{min-height:101px;padding-top:1px;padding-bottom:2px}
+  .brand{width:300px}.site-logo{width:296px}.brand-tagline{font-size:9px;margin-top:-5px}
+  .site-footer{padding-top:2px;padding-bottom:2px;font-size:8px}
+  .recommend h2{padding-top:3px;padding-bottom:3px}
+  .rec-row{padding-top:2px;padding-bottom:2px}
+}
+</style>
+
+<style id="v13-overrides">
+.site-layout{width:100% !important;max-width:none !important;border:0 !important;box-shadow:none !important} 
+.old-header{grid-template-columns:300px minmax(0,1fr) minmax(292px,auto) !important;min-height:88px !important;padding:4px 12px 6px !important;gap:8px 14px !important;background:linear-gradient(#faf8fb,#f5f1f6) !important;border-bottom:1px solid #b3a5b7 !important}
+.brand{width:295px !important;max-width:100% !important}.site-logo{width:290px !important;height:auto !important;aspect-ratio:3/1;max-width:100% !important}.brand-tagline{font-size:9px !important;margin-top:-8px !important;margin-left:6px !important}
+.nav-stack{gap:2px !important}.header-nav{gap:16px !important}.header-nav a{font-size:13px !important}.category-tabs{gap:13px !important;font-size:12px !important;padding-top:0 !important}.category-tabs a{font-size:12px !important}
+.header-tools{gap:10px !important;align-items:center !important}.favorite{font-size:12px !important}.account{font-size:11px !important;line-height:1.05 !important}.account small{font-size:9px !important}.post-ad{font-size:11px !important;padding:7px 9px !important;min-width:112px !important;line-height:1.02 !important}
+.listing-grid{padding-top:0 !important}
+@media (max-width:1400px){.old-header{grid-template-columns:280px minmax(0,1fr) minmax(275px,auto) !important;min-height:82px !important}.brand{width:275px !important}.site-logo{width:270px !important}}
+@media (max-width:1010px){.site-layout{width:100% !important}.old-header{display:flex !important;min-height:78px !important;padding:5px 10px 6px !important;gap:8px !important}.brand{width:auto !important}.site-logo{width:min(68vw,248px) !important}.brand-tagline{font-size:8px !important;margin-top:-7px !important}.mobile-city{font-size:11px !important}}
+@media (max-width:560px){.old-header{min-height:74px !important;padding:4px 8px 5px !important}.site-logo{width:min(66vw,225px) !important}.brand-tagline{font-size:8px !important}}
+</style>
+
+<style id="v16-height-adaptation">
+/* v16: use taller desktop viewports without returning to a scaled screenshot.
+   Compact laptop and mobile layout from v15 are left unchanged. */
+@media (min-width:1011px){
+  html,body{min-height:100%;background:#fff}
+  .site-layout{min-height:100vh;min-height:100dvh;display:flex;flex-direction:column}
+  .listing-grid{flex-grow:1;align-content:start}
+  .site-footer{margin-top:auto}
+}
+@media (min-width:1011px) and (min-height:800px){
+  .listing-grid{
+    grid-template-columns:minmax(0,1.75fr) minmax(0,.72fr) minmax(260px,.82fr);
+  }
+  .listing-photo img{
+    width:100%;
+    max-width:100%;
+    height:auto;
+    max-height:calc(100vh - 476px);
+    max-height:calc(100dvh - 476px);
+    object-fit:contain;
+  }
+}
+</style>
+</head>
+<body>
+<div class="site-layout reference-page">
+  <div class="top-strip"><span><a href="#" class="scare-link">Объявления</a> <a href="#" class="scare-link">Магазины</a> <a href="#" class="scare-link">Для бизнеса</a> <a href="#" class="scare-link">Помощь</a></span><span><a href="#" class="scare-link">★ Избранное</a> <a href="#" class="scare-link">Вход и регистрация</a></span></div>
+  <header class="old-header">
+    <a href="#" class="brand scare-link" aria-label="КРОВИТО.РУ — главная"><img class="site-logo" src="assets/brand-mobile.png" data-asset="brand-mobile.png" alt="KROVITO.RU" width="210" height="70"><span class="brand-tagline">легко убить, легко украсть</span></a>
+    <div class="nav-stack"><nav class="header-nav" aria-label="Разделы сайта"><a href="#" class="scare-link">Объявления</a><a href="#" class="scare-link">Магазины</a><a href="#" class="scare-link">Помощь</a></nav><nav class="category-tabs" aria-label="Категории"><a href="#" class="scare-link">Авто</a><a href="#" class="scare-link">Недвижимость</a><a href="#" class="scare-link">Работа</a><a href="#" class="scare-link">Услуги</a><a href="#" class="scare-link">ещё...</a></nav></div>
+    <div class="header-tools"><a href="#" class="favorite scare-link"><span class="star" aria-hidden="true">★</span> Избранное</a><a href="#" class="account scare-link"><span class="avatar" aria-hidden="true">♟</span><span>Личный кабинет<small>Вход и регистрация</small></span></a><a href="#" class="post-ad scare-link">Подать<br>объявление</a></div>
+    <a href="#" class="mobile-city scare-link">Москва ▾</a><button type="button" id="menu-toggle" class="menu-toggle" aria-label="Меню" aria-controls="mobile-menu-panel" aria-expanded="false">☰</button>
+  </header>
+  <nav id="mobile-menu-panel" class="mobile-menu-panel" hidden aria-label="Меню телефона"><a href="#" class="scare-link">Все объявления</a><a href="#" class="scare-link">Магазины</a><a href="#" class="scare-link">Помощь</a><a href="#" class="scare-link">Личный кабинет</a><a href="#" class="scare-link">Подать объявление</a></nav>
+  <form class="old-search" id="search" role="search" autocomplete="off">
+    <div class="search-fields"><input id="search-input" type="search" aria-label="Поиск объявлений" placeholder="Поиск объявлений"><select aria-label="Категория"><option>Все категории</option><option>Личные вещи</option><option>Для дома</option></select><select aria-label="Регион"><option>Москва</option></select><button type="submit">Найти</button></div>
+    <div class="search-options"><label><input type="checkbox"> искать только в названиях</label><label><input type="checkbox"> с фото</label></div>
+  </form>
+  <div class="search-feedback" id="search-feedback" hidden role="status">По вашему запросу больше объявлений нет.</div>
+  <div class="ad-strip"><span><b>Объявления в Москве</b> &nbsp; Продажа и обмен личных вещей. Частные объявления.</span><small>Реклама</small></div>
+  <nav class="old-breadcrumb" aria-label="Путь к объявлению"><a href="#" class="scare-link">Все объявления</a><span>›</span><a href="#" class="scare-link">Москва</a><span>›</span><a href="#" class="scare-link">Личные вещи</a><span>›</span><a href="#" class="scare-link">Другое</a></nav>
+  <div class="listing-info"><span>Объявление № 666</span><span>Добавлено 14 октября 2012, 21:43</span></div>
+  <div class="listing-title"><h1>Продам голову. Б/у.</h1><div class="price">2 000 руб.</div></div>
+  <main class="listing-grid" aria-label="Объявление">
+    <article class="primary-column">
+      <button class="listing-photo" type="button" aria-label="Открыть фотографию головы"><img src="assets/head-photo.jpg" data-asset="head-photo.jpg" width="720" height="382" alt="Голова на кухонном столе"></button>
+      <div class="gallery-under"><button class="thumb-button" type="button" aria-label="Увеличить фото"><img class="thumb" src="assets/head-photo.jpg" data-asset="head-photo.jpg" alt="Миниатюра фотографии"></button><span>1 фото</span></div>
+      <section class="description" aria-label="Описание"><div class="spec-table"><div><span>Категория:</span> <a href="#" class="scare-link">Личные вещи</a> / <a href="#" class="scare-link">Другое</a></div><div><span>Тип товара:</span> Прочее</div><div><span>Состояние:</span> Б/у.</div></div><div class="details-grid"><div><b>Город</b><span>Москва</span></div><div><b>Дата размещения</b><span>14.10.2012</span></div><div><b>Контактное лицо</b><span>Герман</span></div><div><b>Возможен торг</b><span>Да</span></div></div><p>Состояние более чем хорошее, пользовался сам. Иногда разговаривает.<br>Торг уместен, обмен не интересует.</p><p>Самовывоз. Пакет свой.</p></section>
+      <nav class="actions" aria-label="Действия с объявлением"><a href="#" class="scare-link">Написать продавцу</a><a href="#" class="scare-link">Все объявления Германа</a><a href="#" class="scare-link">Добавить в избранное</a><a href="#" class="scare-link">Поделиться</a><a href="#" class="scare-link">Пожаловаться</a></nav>
+    </article>
+    <aside class="side-column">
+      <section class="seller-card"><h2><a href="#" class="scare-link">Герман</a></h2><p>Частное лицо</p><p>Москва</p><a href="#" class="phone-button scare-link"><span aria-hidden="true">☎</span> Показать телефон</a><button type="button" class="message-button">Написать продавцу</button><div class="seller-extra">Другие объявления: <a href="#" class="scare-link">6</a><br>На сайте с октября 2012 г.<br>Последний вход: давно</div><small>частное лицо, без гарантий</small></section><div class="warning-box"><strong>Советы по безопасности</strong>Осматривайте товар при встрече. Не переводите деньги заранее. Если товар смотрит в ответ — завершайте сделку без промедления.</div>
+      <section class="recommend"><h2>Похожие объявления</h2><div class="rec-row"><img src="assets/meat-grinder.jpg" data-asset="meat-grinder.jpg" alt="Мясорубка"><div><a href="#" class="scare-link">Мясорубка для мяса</a><b>300 руб.</b></div></div><div class="rec-row"><img src="assets/television.jpg" data-asset="television.jpg" alt="Телевизор"><div><a href="#" class="scare-link">Телевизор (работает только СТС)</a><b>1 500 руб.</b></div></div><div class="rec-row"><img src="assets/jars.jpg" data-asset="jars.jpg" alt="Банки с воздухом"><div><a href="#" class="scare-link">Банки с воздухом</a><b>50 руб.</b><small>Воздух 1998 года.</small></div></div></section>
+    </aside>
+  </main>
+  <footer class="site-footer"><div class="footer-links"><a class="scare-link" href="#">О сайте</a><a class="scare-link" href="#">Помощь</a><a class="scare-link" href="#">Правила размещения</a><a class="scare-link" href="#">Обратная связь</a><a class="scare-link" href="#">Реклама на сайте</a><a class="scare-link" href="#">Мобильная версия</a></div><div>© КРОВИТО, 2012. Вымышленный пародийный сайт, не связан с Авито.</div></footer>
+</div>
+
+<div class="viewer" id="viewer" hidden inert role="dialog" aria-label="Просмотр фотографии">
+  <button class="close" id="close-view" aria-label="Закрыть фото" type="button">×</button>
+  <img class="viewer-photo" data-asset="head-photo.jpg" src="assets/head-photo.jpg" width="720" height="382" alt="Голова на кухонном столе">
+  <p>Самовывоз. Пакет свой.</p>
+</div>
+<div class="scare" id="scare" hidden aria-label="Скример"><canvas id="wolf-canvas" width="480" height="672"></canvas><video id="scare-video" data-asset="wolf-final.mp4" preload="auto" playsinline webkit-playsinline aria-label="Скример"></video></div>
+<section class="ending" id="ending" hidden inert aria-label="Ссылка на трек">
+  <a class="end-link" href="https://band.link/kletka_nemol" target="_blank" rel="noopener" aria-label="Слушать НЕМОЛЬ — КЛЕТКА"><img data-asset="bandlink-clearer.jpg" width="640" height="360" alt="band.link/kletka_nemol"></a>
+  <a class="exit-link" href="https://band.link/kletka_nemol" target="_blank" rel="noopener" aria-label="Выход — слушать трек"><img data-asset="exit-yazo.png" width="300" height="90" alt="ВЫХОД ↗"></a>
+  <button id="music-toggle" type="button" aria-label="Приостановить музыку">Звук: вкл.</button>
+</section>
+<audio id="track" data-asset="kletka.mp3" preload="auto"></audio>
+<script>const ASSET_URLS={"bandlink-clearer.jpg":"assets/bandlink-clearer.jpg","brand-mobile.png":"assets/brand-mobile.png","exit-yazo.png":"assets/exit-yazo.png","head-photo.jpg":"assets/head-photo.jpg","jars.jpg":"assets/jars.jpg","kletka.mp3":"assets/kletka.mp3","meat-grinder.jpg":"assets/meat-grinder.jpg","red-hand-cursor.png":"assets/red-hand-cursor.png","television.jpg":"assets/television.jpg","vhs-blocks.png":"assets/vhs-blocks.png","wolf-final-poster.png":"assets/wolf-final-poster.png","wolf-final.mp4":"assets/wolf-final.mp4"};document.querySelectorAll("[data-asset]").forEach(el=>{if(el.dataset.asset!=="kletka.mp3")el.src=ASSET_URLS[el.dataset.asset]});</script>
+<script>'use strict';
+const $=id=>document.getElementById(id),video=$('scare-video'),canvas=$('wolf-canvas'),draw=canvas.getContext('2d'),track=$('track');
+const packed=document.createElement('canvas');packed.width=960;packed.height=672;const pc=packed.getContext('2d',{willReadFrequently:true});
+let active=false,finished=false,timer,raf,glitches,context,buffer,musicSource,musicOn=false,started=0;
+const poster=new Image();poster.src=ASSET_URLS["wolf-final-poster.png"];poster.onload=()=>{if(!active)draw.drawImage(poster,0,0,480,672)};
+let audioData=Promise.all(Array.from({length:11},(_,i)=>fetch("assets/kletka.part"+String(i).padStart(2,"0")).then(r=>{if(!r.ok)throw Error("audio-part-"+i);return r.arrayBuffer()}))).then(parts=>{const mp3blob=new Blob(parts,{type:"audio/mpeg"});const url=URL.createObjectURL(mp3blob);ASSET_URLS["kletka.mp3"]=url;track.src=url;return mp3blob.arrayBuffer()}).catch(()=>null);
+async function prepareAudio(){try{context ||= new (window.AudioContext||window.webkitAudioContext)();await context.resume();if(!buffer){const bytes=await audioData;if(bytes)buffer=await context.decodeAudioData(bytes.slice(0));}}catch{}}
+async function startMusic(){await audioData;if(buffer&&context?.state==='running'){musicSource=context.createBufferSource();musicSource.buffer=buffer;musicSource.connect(context.destination);musicSource.start(0,0);musicOn=true;}else{track.currentTime=0;track.play().then(()=>{musicOn=true;updateMusic()}).catch(()=>{musicOn=false;updateMusic()})}updateMusic()}
+function updateMusic(){$('music-toggle').textContent=musicOn?'Звук: вкл.':'Включить трек';$('music-toggle').setAttribute('aria-label',musicOn?'Приостановить музыку':'Включить трек')}
+$('music-toggle').onclick=async()=>{if(musicSource){await(musicOn?context.suspend():context.resume());musicOn=!musicOn;updateMusic()}else if(!track.paused){track.pause();musicOn=false;updateMusic()}else{await track.play().then(()=>musicOn=true).catch(()=>musicOn=false);updateMusic()}};
+function makeGlitches(){glitches=document.createElement('div');glitches.className='glitch-layer';glitches.setAttribute('aria-hidden','true');const source=document.querySelector('.reference-page');for(let i=0;i<3;i++){const strip=document.createElement('div');strip.className='glitch-fragment';const wrap=document.createElement('div');wrap.style.top=(-scrollY)+'px';const clone=source.cloneNode(true);clone.querySelectorAll('[id]').forEach(e=>e.removeAttribute('id'));clone.querySelectorAll('input,button,select,a').forEach(e=>e.tabIndex=-1);wrap.append(clone);strip.append(wrap);strip.hidden=true;glitches.append(strip)}document.body.append(glitches)}
+function render(){if(!active)return;let t=video.currentTime||0;const elapsed=(performance.now()-started)/1000;if(t>=3){finish();return};
+ if(video.readyState>=2){pc.drawImage(video,0,0,960,672);const rgb=pc.getImageData(0,0,480,672),alpha=pc.getImageData(480,0,480,672);for(let i=0;i<rgb.data.length;i+=4)rgb.data[i+3]=alpha.data[i]<16?0:alpha.data[i]>239?255:Math.round((alpha.data[i]-16)*255/223);draw.putImageData(rgb,0,0)}
+ canvas.style.setProperty('--wolf-scale',String(1+Math.min(t/4,1)*.045));canvas.style.setProperty('--wolf-x',Math.sin(t*9)*1.1+'px');canvas.style.setProperty('--wolf-y',Math.sin(t*7)*1.3+'px');
+ document.body.style.setProperty('--shake-x',[0,1,0,-1,0,0,1,0][Math.floor(t*7)%8]+'px');document.body.style.setProperty('--shake-y',Math.sin(t*11)>.75?'1px':'0px');
+ const faults=[[.8,.18,31,1.8,10],[2,.2,66,2.4,-12],[3.3,.16,17,1.4,9]];
+ glitches?.childNodes.forEach((s,i)=>{const [start,duration,y,h,dx]=faults[i];s.hidden=!(t>=start&&t<start+duration);s.style.clipPath=`inset(${y}% 0 ${100-y-h}% 0)`;s.style.setProperty('--offset',dx+'px')});
+ raf=requestAnimationFrame(render)
+}
+function finish(){if(finished)return;finished=true;active=false;clearTimeout(timer);cancelAnimationFrame(raf);video.pause();$('ending').hidden=false;$('ending').inert=false;$('scare').hidden=true;glitches?.remove();document.body.classList.remove('scaring');startMusic();$('ending').querySelector('a').focus({preventScroll:true})}
+function trigger(e){e?.preventDefault();if(active||finished)return;active=true;prepareAudio();$('viewer').hidden=true;makeGlitches();document.body.style.overflow='hidden';document.body.classList.add('scaring');$('scare').hidden=false;draw.clearRect(0,0,480,672);if(poster.complete)draw.drawImage(poster,0,0,480,672);video.currentTime=0;video.volume=0.5625;video.muted=false;started=performance.now();video.play().then(()=>{raf=requestAnimationFrame(render)}).catch(finish);timer=setTimeout(finish,3000)}
+
+video.addEventListener('ended',finish);
+video.addEventListener('error',()=>{if(active)finish()});
+document.querySelectorAll('a.scare-link').forEach(e=>e.addEventListener('click',trigger));
+document.querySelector('.message-button').addEventListener('click',trigger);
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&active)finish()});
+const kMenu=document.getElementById('menu-toggle'), kPanel=document.getElementById('mobile-menu-panel');
+kMenu.addEventListener('click',()=>{const open=kPanel.hidden;kPanel.hidden=!open;kMenu.setAttribute('aria-expanded',String(open))});
+document.getElementById('search').addEventListener('submit',e=>{e.preventDefault();document.getElementById('search-feedback').hidden=false;if(!kPanel.hidden){kPanel.hidden=true;kMenu.setAttribute('aria-expanded','false')}});
+const kViewer=document.getElementById('viewer');
+function kOpenPhoto(e){e.preventDefault();kViewer.hidden=false;kViewer.inert=false;document.getElementById('close-view').focus({preventScroll:true})}
+function kClosePhoto(){kViewer.hidden=true;kViewer.inert=true;document.querySelector('.listing-photo').focus({preventScroll:true})}
+document.querySelector('.listing-photo').addEventListener('click',kOpenPhoto);
+document.getElementById('close-view').addEventListener('click',kClosePhoto);
+kViewer.addEventListener('click',e=>{if(e.target===kViewer)kClosePhoto()});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!kViewer.hidden&&!active)kClosePhoto()});
+document.querySelector('.thumb-button')?.addEventListener('click',kOpenPhoto);
+const endingImage=new Image();endingImage.src=ASSET_URLS['bandlink-clearer.jpg'];
+</script>
+</body></html>
